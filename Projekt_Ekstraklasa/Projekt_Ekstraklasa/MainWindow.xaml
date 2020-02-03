@@ -1,0 +1,52 @@
+﻿<Window x:Class="Projekt_Ekstraklasa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_Ekstraklasa"
+        mc:Ignorable="d"
+        Title="Ekstraklasa" Height="384.071" Width="844.026">
+    <Grid>
+        <DataGrid Name="Druzyny" Margin="0,45,0,33" AutoGenerateColumns="True" AutoGeneratingColumn="DG1_AutoGeneratingColumn" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="4" >
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.228"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.512"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <Button Name="SaveButton" Click="SaveButton_Click" Content="Zapisz" Margin="407,308,0,0"/>
+
+        <Grid HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="74*"/>
+                <ColumnDefinition Width="423*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonDruzyny" Click="ButtonDruzyny_Click" Content="Druzyny" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Height="25"/>
+            <Button x:Name="ButtonPilkarze"  Click="ButtonPilkarze_Click" Content="Piłkarze" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Height="25" Grid.ColumnSpan="2" Margin="57,0,0,0"/>
+            <Button x:Name="ButtonBramki"  Click="ButtonBramki_Click" Content="Bramki" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Height="25" Margin="114,0,0,0" Grid.ColumnSpan="2"/>
+            <Button x:Name="ButtonKartki"  Click="ButtonKartki_Click" Content="Kartki" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Height="25" Margin="53,0,0,0" Grid.Column="1"/>
+            <Button x:Name="ButtonSedziowie"  Click="ButtonSedziowie_Click" Content="Sędziowie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Height="25" Margin="110,0,0,0" Grid.Column="1"/>
+            <Button x:Name="ButtonSpotkania"  Click="ButtonSpotkania_Click" Content="Spotkania" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Height="25" Margin="177,0,0,0" Grid.Column="1"/>
+            <Button x:Name="ButtonTrenerzy"  Click="ButtonTrenerzy_Click" Content="Trenerzy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="52" Height="25" Margin="239,0,0,0" Grid.Column="1" RenderTransformOrigin="0.798,0.544"/>
+            <ComboBox Name="comboBox" SelectionChanged="ComboBox_SelectionChanged" DropDownClosed="ComboBox_DropDownClosed" Grid.Column="1" HorizontalAlignment="Left" Margin="296,0,0,0" VerticalAlignment="Top" Width="327" Height="25">
+                <ComboBoxItem Content="Lista zawodników danej drużyny"></ComboBoxItem>
+                <ComboBoxItem Content="Średni wiek zawodników drużyny"></ComboBoxItem>
+                <ComboBoxItem Content="Lista rankingów aktywnych zawodników ekstraklasy"></ComboBoxItem>
+                <ComboBoxItem Content="Lista skutecznych bramkarzy ekstraklasy"></ComboBoxItem>
+                <ComboBoxItem Content="Aktualny ranking króla strzelców ekstraklasy"></ComboBoxItem>
+                <ComboBoxItem Content="Listy przyszłych kolejek"></ComboBoxItem>
+                <ComboBoxItem Content="Lista wyników dowolnej rozegranej kolejki"></ComboBoxItem>
+                <ComboBoxItem Content="Aktualny ranking drużyn"></ComboBoxItem>
+                <ComboBoxItem Content="Lista brutalnych piłkarzy"></ComboBoxItem>
+                <ComboBoxItem Content="Raport meczy prowadzonych przez sędziego"></ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="628,0,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="36" />
+            <Label x:Name="label" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="565,0,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+        <Button x:Name="DeleteButton" Click="DeleteButton_Click" Content="Usuń" Margin="0,308,401,0"/>
+    </Grid>
+</Window>

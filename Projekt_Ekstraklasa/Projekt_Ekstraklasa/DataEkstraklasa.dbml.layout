@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 10.5" name="DataEkstraklasa">
+  <DataContextMoniker Name="/DataEkstraklasaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f75834c1-65f5-4417-9cb6-3b23b37b8870" absoluteBounds="6.25, 7.5, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/DataEkstraklasaDataContext/BRAMKI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af035f68-fc78-4851-b6f2-a39a0d7625ea" absoluteBounds="6.265, 7.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93f8177a-0141-4a5a-ab55-c0d0eb09163f" absoluteBounds="0.625, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataEkstraklasaDataContext/DRUZYNY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff4e8a5c-2738-426c-bdec-0ad1fd3dadcc" absoluteBounds="0.64, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="53f74ac9-b4a4-434e-8520-0836bdb868bd" absoluteBounds="3.5, 7.375, 2, 2.9247054036458318">
+      <DataClassMoniker Name="/DataEkstraklasaDataContext/PILKARZE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df20153b-7ad4-4916-868a-8e6761d66953" absoluteBounds="3.515, 7.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ac35045-6380-4d49-afcc-3b37f7578f5f" absoluteBounds="9, 6.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataEkstraklasaDataContext/KARTKI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad3b3f3a-c448-475d-92ab-db8d7308da44" absoluteBounds="9.015, 6.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c3cc1c5-ce90-4662-a1bb-fe31c219da33" absoluteBounds="3.5, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataEkstraklasaDataContext/SPOTKANIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df233401-4935-44e0-871f-ddd710fced51" absoluteBounds="3.515, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06c1497a-f802-43e0-b020-3efd4afc155c" absoluteBounds="3.375, 2.125, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DataEkstraklasaDataContext/TRENERZY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c7b2f6a-1710-4417-9fa3-8a9a54eb98f9" absoluteBounds="3.39, 2.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f4bb108-7a24-448e-931f-88d88d4c33a0" absoluteBounds="6.25, 4.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataEkstraklasaDataContext/SEDZIOWIE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce1b1875-59be-47cb-860b-31cb43057128" absoluteBounds="6.265, 5.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 8.38544840494792); (5.79166666666667 : 8.38544840494792 : JumpStart); (5.95833333333333 : 8.38544840494792 : JumpEnd); (6.25 : 8.38544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/PILKARZE/PILKARZE_BRAMKI" />
+      <nodes>
+        <classShapeMoniker Id="53f74ac9-b4a4-434e-8520-0836bdb868bd" />
+        <classShapeMoniker Id="f75834c1-65f5-4417-9cb6-3b23b37b8870" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.88022420247396); (6.25 : 7.88022420247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/PILKARZE/PILKARZE_BRAMKI1" />
+      <nodes>
+        <classShapeMoniker Id="53f74ac9-b4a4-434e-8520-0836bdb868bd" />
+        <classShapeMoniker Id="f75834c1-65f5-4417-9cb6-3b23b37b8870" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.625 : 6.90549967447917); (1.625 : 8.83735270182292); (3.5 : 8.83735270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/DRUZYNY/DRUZYNY_PILKARZE" />
+      <nodes>
+        <classShapeMoniker Id="93f8177a-0141-4a5a-ab55-c0d0eb09163f" />
+        <classShapeMoniker Id="53f74ac9-b4a4-434e-8520-0836bdb868bd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.40625); (5.79166666666667 : 7.40625 : JumpStart); (5.95833333333333 : 7.40625 : JumpEnd); (9 : 7.40625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/PILKARZE/PILKARZE_KARTKI" />
+      <nodes>
+        <classShapeMoniker Id="53f74ac9-b4a4-434e-8520-0836bdb868bd" />
+        <classShapeMoniker Id="8ac35045-6380-4d49-afcc-3b37f7578f5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.65549967447917); (5.875 : 7.03049967447917); (5.875 : 8.85942460742188); (6.25 : 8.85942460742188)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/SPOTKANIA/SPOTKANIA_BRAMKI" />
+      <nodes>
+        <classShapeMoniker Id="1c3cc1c5-ce90-4662-a1bb-fe31c219da33" />
+        <classShapeMoniker Id="f75834c1-65f5-4417-9cb6-3b23b37b8870" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.53125); (10.26562625 : 4.53125); (10.26562625 : 6.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/SPOTKANIA/SPOTKANIA_KARTKI" />
+      <nodes>
+        <classShapeMoniker Id="1c3cc1c5-ce90-4662-a1bb-fe31c219da33" />
+        <classShapeMoniker Id="8ac35045-6380-4d49-afcc-3b37f7578f5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 5.70274983723958); (3.5 : 5.70274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/DRUZYNY/DRUZYNY_SPOTKANIA" />
+      <nodes>
+        <classShapeMoniker Id="93f8177a-0141-4a5a-ab55-c0d0eb09163f" />
+        <classShapeMoniker Id="1c3cc1c5-ce90-4662-a1bb-fe31c219da33" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 5.16387491861979); (3.5 : 5.16387491861979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/DRUZYNY/DRUZYNY_SPOTKANIA1" />
+      <nodes>
+        <classShapeMoniker Id="93f8177a-0141-4a5a-ab55-c0d0eb09163f" />
+        <classShapeMoniker Id="1c3cc1c5-ce90-4662-a1bb-fe31c219da33" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.625 : 4.75); (1.625 : 3.01044840494792); (3.375 : 3.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/DRUZYNY/DRUZYNY_TRENERZY" />
+      <nodes>
+        <classShapeMoniker Id="93f8177a-0141-4a5a-ab55-c0d0eb09163f" />
+        <classShapeMoniker Id="06c1497a-f802-43e0-b020-3efd4afc155c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.5312475); (9.4687475 : 5.5312475); (9.4687475 : 6.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/SEDZIOWIE/SEDZIOWIE_KARTKI" />
+      <nodes>
+        <classShapeMoniker Id="3f4bb108-7a24-448e-931f-88d88d4c33a0" />
+        <classShapeMoniker Id="8ac35045-6380-4d49-afcc-3b37f7578f5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.60659912109375); (6.25 : 5.60659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataEkstraklasaDataContext/SPOTKANIA/SPOTKANIA_SEDZIOWIE" />
+      <nodes>
+        <classShapeMoniker Id="1c3cc1c5-ce90-4662-a1bb-fe31c219da33" />
+        <classShapeMoniker Id="3f4bb108-7a24-448e-931f-88d88d4c33a0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

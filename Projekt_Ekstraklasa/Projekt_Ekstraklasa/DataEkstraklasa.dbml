@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ekstraklasa" Class="DataEkstraklasaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\DARIU\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\SSDT\EKSTRAKLASA.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="Projekt_Ekstraklasa.Properties.Settings" SettingsPropertyName="C__USERS_DARIU_APPDATA_LOCAL_MICROSOFT_VISUALSTUDIO_SSDT_EKSTRAKLASA_MDFConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BRAMKI" Member="BRAMKIs">
+    <Type Name="BRAMKI">
+      <Column Name="Id_bramka" Member="Id" Storage="_Id_bramka" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_spot" Member="Id_Spotkania" Storage="_Id_spot" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_strzelec" Member="Id_Strzelca" Storage="_Id_strzelec" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_bramkarz" Member="Id_Bramkarza" Storage="_Id_bramkarz" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Czas_bramki" Member="Czas_Bramki" Storage="_Czas_bramki" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PILKARZE_BRAMKI" Member="PILKARZE" ThisKey="Id_Bramkarza" OtherKey="Id" Type="PILKARZE" IsForeignKey="true" />
+      <Association Name="PILKARZE_BRAMKI1" Member="PILKARZE1" ThisKey="Id_Strzelca" OtherKey="Id" Type="PILKARZE" IsForeignKey="true" />
+      <Association Name="SPOTKANIA_BRAMKI" Member="SPOTKANIA" ThisKey="Id_Spotkania" OtherKey="Id" Type="SPOTKANIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DRUZYNY" Member="DRUZYNies">
+    <Type Name="DRUZYNY">
+      <Column Name="Id_druz" Member="Id" Storage="_Id_druz" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa_druz" Member="Nazwa" Storage="_Nazwa_druz" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Wlasciciel_druz" Member="Właściciel" Storage="_Wlasciciel_druz" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Siedziba_druz" Member="Siedziba" Storage="_Siedziba_druz" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Ilosc_strzelonych_goli_druz" Member="Strzelone_Gole" Storage="_Ilosc_strzelonych_goli_druz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ilosc_rozegranych_meczy_druz" Member="Rozegrane_Mecze" Storage="_Ilosc_rozegranych_meczy_druz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ilosc_punktow_druz" Member="Punkty" Storage="_Ilosc_punktow_druz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DRUZYNY_PILKARZE" Member="PILKARZEs" ThisKey="Id" OtherKey="Id_Drużyny" Type="PILKARZE" />
+      <Association Name="DRUZYNY_SPOTKANIA" Member="SPOTKANIAs" ThisKey="Id" OtherKey="Id_Gościa" Type="SPOTKANIA" />
+      <Association Name="DRUZYNY_SPOTKANIA1" Member="SPOTKANIAs1" ThisKey="Id" OtherKey="Id_Gospodarza" Type="SPOTKANIA" />
+      <Association Name="DRUZYNY_TRENERZY" Member="TRENERZies" ThisKey="Id" OtherKey="Druzyna" Type="TRENERZY" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PILKARZE" Member="PILKARZEs">
+    <Type Name="PILKARZE">
+      <Column Name="Id_pilk" Member="Id" Storage="_Id_pilk" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_druz" Member="Id_Drużyny" Storage="_Id_druz" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Imie_pilk" Member="Imię" Storage="_Imie_pilk" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Nazwisko_pilk" Member="Nazwisko" Storage="_Nazwisko_pilk" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Data_ur_pilk" Member="Data_Urodzenia" Storage="_Data_ur_pilk" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Ilosc_meczy_pilk" Member="Ilość_Meczy" Storage="_Ilosc_meczy_pilk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ilosc_strzelonych_goli_pilk" Member="Strzelone_Gole" Storage="_Ilosc_strzelonych_goli_pilk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ilosc_wpuszczonych_goli_pilk" Member="Wpuszczone_Piłki" Storage="_Ilosc_wpuszczonych_goli_pilk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ilosc_zoltych_kartek_pilk" Member="Żółte_Kartki" Storage="_Ilosc_zoltych_kartek_pilk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ilosc_czerwonych_kartek_pilk" Member="Czerwone_Kartki" Storage="_Ilosc_czerwonych_kartek_pilk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Specjalizacja_pilk" Member="Pozycja" Storage="_Specjalizacja_pilk" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="PILKARZE_BRAMKI" Member="BRAMKIs" ThisKey="Id" OtherKey="Id_Bramkarza" Type="BRAMKI" />
+      <Association Name="PILKARZE_BRAMKI1" Member="BRAMKIs1" ThisKey="Id" OtherKey="Id_Strzelca" Type="BRAMKI" />
+      <Association Name="PILKARZE_KARTKI" Member="KARTKIs" ThisKey="Id" OtherKey="Id_pilk" Type="KARTKI" />
+      <Association Name="DRUZYNY_PILKARZE" Member="DRUZYNY" ThisKey="Id_Drużyny" OtherKey="Id" Type="DRUZYNY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KARTKI" Member="KARTKIs">
+    <Type Name="KARTKI">
+      <Column Name="Id_kart" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_pilk" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_sed" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_spot" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Rodzaj_kartki" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PILKARZE_KARTKI" Member="PILKARZE" ThisKey="Id_pilk" OtherKey="Id" Type="PILKARZE" IsForeignKey="true" />
+      <Association Name="SPOTKANIA_KARTKI" Member="SPOTKANIA" ThisKey="Id_spot" OtherKey="Id" Type="SPOTKANIA" IsForeignKey="true" />
+      <Association Name="SEDZIOWIE_KARTKI" Member="SEDZIOWIE" ThisKey="Id_sed" OtherKey="Id" Type="SEDZIOWIE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SPOTKANIA" Member="SPOTKANIAs">
+    <Type Name="SPOTKANIA">
+      <Column Name="Id_spot" Member="Id" Storage="_Id_spot" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_gospo" Member="Id_Gospodarza" Storage="_Id_gospo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_gosc" Member="Id_Gościa" Storage="_Id_gosc" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Data_spot" Member="Data_Spotkania" Storage="_Data_spot" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Miejsce_spot" Member="Miejsce_Spotkania" Storage="_Miejsce_spot" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Wynik_gospo" Member="Wynik_Gospodarza" Storage="_Wynik_gospo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Wynik_gosc" Member="Wynik_Gościa" Storage="_Wynik_gosc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SPOTKANIA_BRAMKI" Member="BRAMKIs" ThisKey="Id" OtherKey="Id_Spotkania" Type="BRAMKI" />
+      <Association Name="SPOTKANIA_KARTKI" Member="KARTKIs" ThisKey="Id" OtherKey="Id_spot" Type="KARTKI" />
+      <Association Name="SPOTKANIA_SEDZIOWIE" Member="SEDZIOWIEs" ThisKey="Id" OtherKey="Id_Spotkania" Type="SEDZIOWIE" />
+      <Association Name="DRUZYNY_SPOTKANIA" Member="DRUZYNY" ThisKey="Id_Gościa" OtherKey="Id" Type="DRUZYNY" IsForeignKey="true" />
+      <Association Name="DRUZYNY_SPOTKANIA1" Member="DRUZYNY1" ThisKey="Id_Gospodarza" OtherKey="Id" Type="DRUZYNY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRENERZY" Member="TRENERZies">
+    <Type Name="TRENERZY">
+      <Column Name="Id_tren" Member="Id" Storage="_Id_tren" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_druz" Member="Druzyna" Storage="_Id_druz" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Imie_tren" Member="Imie" Storage="_Imie_tren" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Nazwisko_tren" Member="Nazwisko" Storage="_Nazwisko_tren" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Data_ur_tren" Member="DataUrodzenia" Storage="_Data_ur_tren" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="DRUZYNY_TRENERZY" Member="DRUZYNY" ThisKey="Druzyna" OtherKey="Id" Type="DRUZYNY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SEDZIOWIE" Member="SEDZIOWIEs">
+    <Type Name="SEDZIOWIE">
+      <Column Name="Id_sed" Member="Id" Storage="_Id_sed" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_spot" Member="Id_Spotkania" Storage="_Id_spot" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Imie_sed" Member="Imie" Storage="_Imie_sed" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Nazwisko_sed" Member="Nazwisko" Storage="_Nazwisko_sed" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Data_ur_sed" Member="Data_Urodzenia" Storage="_Data_ur_sed" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Ilosc_wydanych_kartek_sed" Member="Ilość_Kartek" Storage="_Ilosc_wydanych_kartek_sed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SEDZIOWIE_KARTKI" Member="KARTKIs" ThisKey="Id" OtherKey="Id_sed" Type="KARTKI" />
+      <Association Name="SPOTKANIA_SEDZIOWIE" Member="SPOTKANIA" ThisKey="Id_Spotkania" OtherKey="Id" Type="SPOTKANIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
